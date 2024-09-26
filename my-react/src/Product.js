@@ -1,14 +1,17 @@
 import React from "react";
+import asusImage from "./img/asus.jpeg";
+import acerImage from "./img/acer.jpeg";
+import lenovoImage from "./img/lenovo.jpeg";
 
 function Product(){
     // const products = ["Asus", "Acer", "Lenovo"];
     const products = [
-        {id : "P001", nama : "Asus", harga : 8000000, deskripsi: "High performance laptop", urlFoto: "https://example.com/asus.jpg"},
-        {id : "P002", nama : "Acer", harga : 9000000, deskripsi: "Affordable and reliable", urlFoto: "https://example.com/acer.jpg"},
-        {id : "P003", nama : "Lenovo", harga : 10000000, deskripsi: "Business class laptop", urlFoto: "https://example.com/lenovo.jpg"},
+        {id : "P001", nama : "Asus", harga : 8000000, deskripsi: "High performance laptop", urlFoto: asusImage},
+        {id : "P002", nama : "Acer", harga : 9000000, deskripsi: "Affordable and reliable", urlFoto: acerImage},
+        {id : "P003", nama : "Lenovo", harga : 10000000, deskripsi: "Business class laptop", urlFoto: lenovoImage},
     ]
     // const displayProducts = products.map((product) => (
-    //     <div key={product}>{product}</div>
+    //     <div key={product}>{product}</div>   
     // ));
     // return <div>{displayProducts}</div>;
 
@@ -31,7 +34,7 @@ function Product(){
                         <td>{product.nama}</td>
                         <td>{product.harga}</td>
                         <td>{product.deskripsi}</td>
-                        <td><img src={product.urlFoto} alt={product.nama} width="100"/></td>
+                        <td><img src={product.urlFoto} width="100"/></td>
                     </tr>
                     );
                 })}
